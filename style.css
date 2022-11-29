@@ -15,6 +15,9 @@
 
 .page {
   --orange: #f7941e;
+  --white: #fff;
+  --black: #000;
+  --grey: #f2f2f2;
   max-width: 1440px;
   height: 100vh;
   margin: 0 auto;
@@ -26,7 +29,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 116px;
+  min-height: 116px;
 }
 
 .logo {
@@ -44,7 +47,7 @@
 .header__link {
   text-transform: capitalize;
   text-decoration: none;
-  color: #000;
+  color: var(--black);
 }
 
 .header__link a {
@@ -57,12 +60,28 @@
   font-family: "Gilroy";
   font-size: 18px;
   line-height: 22px;
-  border: 1px solid #f7941e;
+  border: 1px solid var(--orange);
   border-radius: 5px;
   width: 150px;
   height: 44px;
-  background: #fff;
+  background: var(--white);
   text-transform: uppercase;
+}
+@media screen and (max-width: 1439px) {
+  .article {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 154px;
+  }
+
+  .article__description {
+    align-items: center;
+    text-align: center;
+  }
+
+  .gift__button {
+    margin-bottom: 56px;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -78,4 +97,52 @@
   .header__links {
     flex-direction: column;
   }
+}
+
+.main {
+  width: 100%;
+}
+
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 700px;
+  background: var(--grey);
+}
+
+.article__description {
+  max-width: 433px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.article__title {
+  font-size: 56px;
+  line-height: 69px;
+  margin: 0;
+  padding: 0;
+}
+
+.article__text {
+  font-size: 20px;
+  line-height: 140%;
+  margin: 0;
+  padding: 0;
+  margin-top: 36px;
+}
+
+.article__image {
+  width: 719px;
+  height: 700px;
+  background: url(./images/Background.png) center / cover;
+}
+
+.gift__button {
+  margin-top: 56px;
+  width: 250px;
+  height: 60px;
+  color: var(--white);
+  background: var(--orange);
 }
