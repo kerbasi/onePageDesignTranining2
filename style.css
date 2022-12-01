@@ -398,6 +398,10 @@
   background: var(--light-black);
 }
 
+.blogs {
+  min-height: 1026px;
+}
+
 .footer {
   min-height: 410px;
   background: var(--light-grey);
